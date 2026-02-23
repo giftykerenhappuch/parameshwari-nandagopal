@@ -25,9 +25,8 @@
     }
 
     .gallery img {
-      width: 120%;
-      height: 600px;
-      object-fit: cover;
+      width: 100%;   /* Image fits inside grid */
+      height: auto;  /* Keeps original image ratio */
       border-radius: 10px;
       display: block;
     }
@@ -36,9 +35,6 @@
     @media (max-width: 480px) {
       .gallery {
         grid-template-columns: 1fr;
-      }
-      .gallery img {
-        height: 400px;
       }
     }
 
@@ -60,10 +56,10 @@
 <body>
 
   <div class="gallery">
-    <img src="assets\Black and White Simple Thank You Instagram Post.png" alt="Image 1">
-    <img src="assets\2nd.jfif" alt="Image 2">
-    <img src="assets\3rd.jfif" alt="Image 3">
-    <img src="assets\Black and White Simple Thank You Instagram Post (1).png" alt="Image 4">
+    <img src="assets/Black and White Simple Thank You Instagram Post.png" alt="Image 1">
+    <img src="assets/2nd.jfif" alt="Image 2">
+    <img src="assets/3rd.jfif" alt="Image 3">
+    <img src="assets/Black and White Simple Thank You Instagram Post (1).png" alt="Image 4">
   </div>
 
 </body>
