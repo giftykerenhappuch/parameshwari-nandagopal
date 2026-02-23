@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My 4 Images</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Images</title>
 
-    body {
-      background: #f0f0f0;
-      padding: 20px;
-    }
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  body {
+    background: #f0f0f0;
+  }
 
-    .gallery img {
-      width: 100%;   /* Image fits inside grid */
-      height: auto;  /* Keeps original image ratio */
-      border-radius: 10px;
-      display: block;
-    }
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
 
-    /* Mobile - 1 image per row */
-    @media (max-width: 480px) {
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-    }
+  .gallery img {
+    display: block;
+    max-height: 90vh;   /* Reduce height */
+  width: auto;        /* Keep original ratio */
+  display: block;
+  }
+  
 
-    /* Tablet - 2 images per row */
-    @media (min-width: 481px) and (max-width: 768px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* Desktop - 4 images per row */
-    @media (min-width: 1024px) {
-      .gallery {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
   <div class="gallery">
-    <img src="assets/Black and White Simple Thank You Instagram Post.png" alt="Image 1">
-    <img src="assets/2nd.jfif" alt="Image 2">
-    <img src="assets/3rd.jfif" alt="Image 3">
-    <img src="assets/Black and White Simple Thank You Instagram Post (1).png" alt="Image 4">
+    <img src="assets/Black and White Simple Thank You Instagram Post.png" alt="">
+    <img src="assets/2nd.jfif" alt="">
+    <img src="assets/3rd.jfif" alt="">
+    <img src="assets/Black and White Simple Thank You Instagram Post (1).png" alt="">
   </div>
 
 </body>
