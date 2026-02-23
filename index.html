@@ -6,54 +6,66 @@
 <title>Responsive Gallery</title>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+/* 📱 Mobile View */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gallery .section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* 💻 Laptop/Desktop View */
+@media (min-width: 1024px) {
+
+  html {
+    scroll-snap-type: y mandatory;
   }
 
   body {
-    background: #f0f0f0;
+    margin: 0;
   }
 
   .gallery {
-    display: grid;
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
     display: block;
+    padding: 0;
   }
 
-
-  /* 💻 Laptop/Desktop - One image per full screen */
-  @media (min-width: 1024px) {
-    html, body {
-      scroll-snap-type: y mandatory;
-      overflow-y: scroll;
-    }
-
-    .gallery {
-      display: block;
-      padding: 0;
-    }
-
-    .gallery img {
-      height: 100vh;        /* full screen height */
-      width: auto;          /* keep ratio */
-      max-width: 100%;
-      object-fit: contain;  /* show full image */
-      scroll-snap-align: start;
-      display: block;
-      margin: 0 auto;
-    }
+  .section {
+    height: 100vh;                 /* One image per screen */
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;           /* Gap between images */
   }
+
+  .section img {
+    max-height: 90vh;              /* Prevent overflow */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}
 
 </style>
 </head>
@@ -61,10 +73,23 @@
 <body>
 
 <div class="gallery">
-  <img src="assets/Black and White Simple Thank You Instagram Post.png" alt="">
-  <img src="assets/2nd.jfif" alt="">
-  <img src="assets/3rd.jfif" alt="">
-  <img src="assets/Black and White Simple Thank You Instagram Post (1).png" alt="">
+
+  <div class="section">
+    <img src="assets/Black and White Simple Thank You Instagram Post.png" alt="">
+  </div>
+
+  <div class="section">
+    <img src="assets/2nd.jfif" alt="">
+  </div>
+
+  <div class="section">
+    <img src="assets/3rd.jfif" alt="">
+  </div>
+
+  <div class="section">
+    <img src="assets/Black and White Simple Thank You Instagram Post (1).png" alt="">
+  </div>
+
 </div>
 
 </body>
